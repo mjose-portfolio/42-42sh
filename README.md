@@ -13,6 +13,7 @@ This project consists of creating a complete shell and uses the work done on you
 ------
 
 - `make`
+
 ![alt text](README_resources/make.gif)
 
 ### Make Options
@@ -55,33 +56,33 @@ This project consists of creating a complete shell and uses the work done on you
 
 	- Options:
 
-		`-b [pathname]`: True if pathname resolves to an existing directory entry for a block special file. False if pathname cannot be resolved, or if pathname resolves to an existing directory entry for a file that is not a block special file.
+		`-b [pathname]`: True if `pathname` resolves to an existing directory entry for a block special file. False if `pathname` cannot be resolved, or if `pathname` resolves to an existing directory entry for a file that is not a block special file.
 
-		`-c [pathname]`: True if pathname resolves to an existing directory entry for a character special file. False if pathname cannot be resolved, or if pathname resolves to an existing directory entry for a file that is not a character special file.
+		`-c [pathname]`: True if `pathname` resolves to an existing directory entry for a character special file. False if `pathname` cannot be resolved, or if `pathname` resolves to an existing directory entry for a file that is not a character special file.
 
-		`-d [pathname]`: True if pathname resolves to an existing directory entry for a directory. False if pathname cannot be resolved, or if pathname resolves to an existing directory entry for a file that is not a directory.
+		`-d [pathname]`: True if `pathname` resolves to an existing directory entry for a directory. False if `pathname` cannot be resolved, or if `pathname` resolves to an existing directory entry for a file that is not a directory.
 
-		`-e [pathname]`: True if pathname resolves to an existing directory entry. False if pathname cannot be resolved.
+		`-e [pathname]`: True if `pathname` resolves to an existing directory entry. False if `pathname` cannot be resolved.
 
-		`-f [pathname]`: True if pathname resolves to an existing directory entry for a regular file. False if pathname cannot be resolved, or if pathname resolves to an existing directory entry for a file that is not a regular file.
+		`-f [pathname]`: True if `pathname` resolves to an existing directory entry for a regular file. False if `pathname` cannot be resolved, or if `pathname` resolves to an existing directory entry for a file that is not a regular file.
 
-		`-g [pathname]`: True if pathname resolves to an existing directory entry for a file that has its set-group-ID flag set. False if pathname cannot be resolved, or if pathname resolves to an existing directory entry for a file that does not have its set-group-ID flag set.
+		`-g [pathname]`: True if `pathname` resolves to an existing directory entry for a file that has its set-group-ID flag set. False if `pathname` cannot be resolved, or if `pathname` resolves to an existing directory entry for a file that does not have its set-group-ID flag set.
 
-		`-L [pathname]`: True if pathname resolves to an existing directory entry for a symbolic link. False if pathname cannot be resolved, or if pathname resolves to an existing directory entry for a file that is not a symbolic link. If the final component of pathname is a symbolic link, that symbolic link is not followed.
+		`-L [pathname]`: True if `pathname` resolves to an existing directory entry for a symbolic link. False if `pathname` cannot be resolved, or if `pathname` resolves to an existing directory entry for a file that is not a symbolic link. If the final component of `pathname` is a symbolic link, that symbolic link is not followed.
 
-		`-p [pathname]`: True if pathname resolves to an existing directory entry for a FIFO. False if pathname cannot be resolved, or if pathname resolves to an existing directory entry for a file that is not a FIFO.
+		`-p [pathname]`: True if `pathname` resolves to an existing directory entry for a FIFO. False if `pathname` cannot be resolved, or if `pathname` resolves to an existing directory entry for a file that is not a FIFO.
 
-		`-r [pathname]`: True if pathname resolves to an existing directory entry for a file for which permission to read from the file will be granted, as defined in [File Read, Write, and Creation](https://pubs.opengroup.org/onlinepubs/9699919799//utilities/V3_chap01.html#tag_17_01_01_04). False if pathname cannot be resolved, or if pathname resolves to an existing directory entry for a file for which permission to read from the file will not be granted.
+		`-r [pathname]`: True if `pathname` resolves to an existing directory entry for a file for which permission to read from the file will be granted, as defined in [File Read, Write, and Creation](https://pubs.opengroup.org/onlinepubs/9699919799//utilities/V3_chap01.html#tag_17_01_01_04). False if `pathname` cannot be resolved, or if `pathname` resolves to an existing directory entry for a file for which permission to read from the file will not be granted.
 
-		`-S [pathname]`: True if pathname resolves to an existing directory entry for a socket. False if pathname cannot be resolved, or if pathname resolves to an existing directory entry for a file that is not a socket.
+		`-S [pathname]`: True if `pathname` resolves to an existing directory entry for a socket. False if `pathname` cannot be resolved, or if `pathname` resolves to an existing directory entry for a file that is not a socket.
 
-		`-s [pathname]`: True if pathname resolves to an existing directory entry for a file that has a size greater than zero. False if pathname cannot be resolved, or if pathname resolves to an existing directory entry for a file that does not have a size greater than zero.
+		`-s [pathname]`: True if `pathname` resolves to an existing directory entry for a file that has a size greater than zero. False if `pathname` cannot be resolved, or if `pathname` resolves to an existing directory entry for a file that does not have a size greater than zero.
 
-		`-u [pathname]`: True if pathname resolves to an existing directory entry for a file that has its set-user-ID flag set. False if pathname cannot be resolved, or if pathname resolves to an existing directory entry for a file that does not have its set-user-ID flag set.
+		`-u [pathname]`: True if `pathname` resolves to an existing directory entry for a file that has its set-user-ID flag set. False if `pathname` cannot be resolved, or if `pathname` resolves to an existing directory entry for a file that does not have its set-user-ID flag set.
 
-		`-w [pathname]`: True if pathname resolves to an existing directory entry for a file for which permission to write to the file will be granted, as defined in [File Read, Write, and Creation](https://pubs.opengroup.org/onlinepubs/9699919799//utilities/V3_chap01.html#tag_17_01_01_04). False if pathname cannot be resolved, or if pathname resolves to an existing directory entry for a file for which permission to write to the file will not be granted.
+		`-w [pathname]`: True if `pathname` resolves to an existing directory entry for a file for which permission to write to the file will be granted, as defined in [File Read, Write, and Creation](https://pubs.opengroup.org/onlinepubs/9699919799//utilities/V3_chap01.html#tag_17_01_01_04). False if `pathname` cannot be resolved, or if `pathname` resolves to an existing directory entry for a file for which permission to write to the file will not be granted.
 
-		`-x [pathname]`: True if pathname resolves to an existing directory entry for a file for which permission to execute the file (or search it, if it is a directory) will be granted, as defined in [File Read, Write, and Creation](https://pubs.opengroup.org/onlinepubs/9699919799//utilities/V3_chap01.html#tag_17_01_01_04). False if pathname cannot be resolved, or if pathname resolves to an existing directory entry for a file for which permission to execute (or search) the file will not be granted.
+		`-x [pathname]`: True if `pathname` resolves to an existing directory entry for a file for which permission to execute the file (or search it, if it is a directory) will be granted, as defined in [File Read, Write, and Creation](https://pubs.opengroup.org/onlinepubs/9699919799//utilities/V3_chap01.html#tag_17_01_01_04). False if `pathname` cannot be resolved, or if `pathname` resolves to an existing directory entry for a file for which permission to execute (or search) the file will not be granted.
 
 		`-z [string]`: True if the length of string `string` is zero; otherwise, false.
 
