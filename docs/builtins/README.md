@@ -41,6 +41,8 @@ Return to index: [Builtins](#Builtins), [42sh](../#42sh)
 
 Resume each suspended job in the background, as if it had been started with &.
 
+Return to index: [Builtins](#Builtins), [42sh](../#42sh)
+
 #### 3.1.3 cd
 
 ------
@@ -53,11 +55,15 @@ Change the current working directory to `directory`. If `directory` is not suppl
 
 `-P`: not follow symbolic links: symbolic links are resolved while `cd` is traversing `directory` and before processing an instance of ‘`..`’ in directory.
 
+Return to index: [Builtins](#Builtins), [42sh](../#42sh)
+
 #### 3.1.4 echo
 
 ------
 
 Outputs it's args to stdout, separated by spaces, followed by a newline. The return status is always 0.
+
+Return to index: [Builtins](#Builtins), [42sh](../#42sh)
 
 #### 3.1.5 env
 
@@ -69,11 +75,15 @@ Set the environment for command invocation.
 
 `-i`: Invoke utility with exactly the environment specified by the arguments; the inherited environment shall be ignored completely.
 
+Return to index: [Builtins](#Builtins), [42sh](../#42sh)
+
 #### 3.1.6 exit [n]
 
 ------
 
 Shall cause the shell to exit with the exit status specified by the unsigned decimal integer n.
+
+Return to index: [Builtins](#Builtins), [42sh](../#42sh)
 
 #### 3.1.7 export
 
@@ -85,11 +95,15 @@ Marks an environment variable to be exported with any newly forked child process
 
 `-p`: List of all names that are exported in the current shell.
 
+Return to index: [Builtins](#Builtins), [42sh](../#42sh)
+
 #### 3.1.8 false
 
 ------
 
 Do nothing, returning a non-zero (false) exit status.
+
+Return to index: [Builtins](#Builtins), [42sh](../#42sh)
 
 #### 3.1.9 fg
 
@@ -97,15 +111,19 @@ Do nothing, returning a non-zero (false) exit status.
 
 Put each specified job in the background, or the current job if none is specified.
 
+Return to index: [Builtins](#Builtins), [42sh](../#42sh)
+
 #### 3.1.10 hash
 
 ------
 
 Determine and remember the full pathname of each commandname. If no arguments are given, display information about remembered command locations.
 
-##### 3.1.10.1 Options
+#### 3.1.10.1 Options
 
 `-r`: Forget all remembered locations.
+
+Return to index: [Builtins](#Builtins), [42sh](../#42sh)
 
 #### 3.1.11 history
 
@@ -119,6 +137,8 @@ With no options, display the history list with line numbers.
 
 `-d [offset]`: Delete the history entry at position `offset`. `offset` should be specified as it appears when the history is displayed.
 
+Return to index: [Builtins](#Builtins), [42sh](../#42sh)
+
 #### 3.1.12 jobs
 
 ------
@@ -129,11 +149,15 @@ The first form lists the active jobs.
 
 `-p`: List only the process ID of the job’s process group leader.
 
+Return to index: [Builtins](#Builtins), [42sh](../#42sh)
+
 #### 3.1.13 set
 
 ------
 
 Change the value of a shell option and set the positional parameters, or display the names and values of shell variables.
+
+Return to index: [Builtins](#Builtins), [42sh](../#42sh)
 
 #### 3.1.14 test
 
@@ -191,17 +215,23 @@ Change the value of a shell option and set the positional parameters, or display
 
 `! [expression]`: True if `expression` is false. False if `expression` is true.
 
+Return to index: [Builtins](#Builtins), [42sh](../#42sh)
+
 #### 3.1.15 true
 
 ------
 
 Does nothing except return an exit status of 0, meaning "success". 
 
+Return to index: [Builtins](#Builtins), [42sh](../#42sh)
+
 #### 3.1.16 type
 
 ------
 
 Describe a command. For each *name*, indicate how it would be interpreted if used as a command name.
+
+Return to index: [Builtins](#Builtins), [42sh](../#42sh)
 
 #### 3.1.17 unalias
 
@@ -213,8 +243,12 @@ Remove each name from the list of aliases.
 
 `-a`: all aliases are removed.
 
+Return to index: [Builtins](#Builtins), [42sh](../#42sh)
+
 #### 3.1.18 unset
 
 ------
 
 Remove variable.
+
+Return to index: [Builtins](#Builtins), [42sh](../#42sh)
