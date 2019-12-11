@@ -33,7 +33,7 @@
 
 Without arguments, `alias` prints the list of aliases on the standard output. If arguments are supplied, an alias is defined for each name whose value is given. If no value is given, the name and value of the alias is printed.
 
-Return to index: [Builtins](#Builtins), [42sh][../README.md#42sh]
+Return to index: [Builtins](#Builtins), [42sh](../#42sh)
 
 #### 3.1.2 bg
 
