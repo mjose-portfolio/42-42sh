@@ -6,26 +6,26 @@
   * [3.1.3.1 Options](#3131-options)
 - [3.1.4 echo](#314-echo)
 - [3.1.5 env](#315-env)
-  * [3.1.6.1 Options](#3161-options)
-- [3.1.7 exit [n]](#317-exit--n-)
-- [3.1.8 export](#318-export)
-  * [3.1.8.1 Options](#3181-options)
-- [3.1.9 false](#319-false)
-- [3.1.10 fg](#3110-fg)
-- [3.1.11 hash](#3111-hash)
+  * [3.1.5.1 Options](#3151-options)
+- [3.1.6 exit [n]](#316-exit--n-)
+- [3.1.7 export](#317-export)
+  * [3.1.7.1 Options](#3171-options)
+- [3.1.8 false](#318-false)
+- [3.1.9 fg](#319-fg)
+- [3.1.10 hash](#3110-hash)
+  * [3.1.10.1 Options](#31101-options)
+- [3.1.11 history](#3111-history)
   * [3.1.11.1 Options](#31111-options)
-- [3.1.12 history](#3112-history)
-  * [3.1.13.1 Options](#31131-options)
-- [3.1.14 jobs](#3114-jobs)
+- [3.1.12 jobs](#3112-jobs)
+  * [3.1.12.1 Options](#31121-options)
+- [3.1.13 set](#3113-set)
+- [3.1.14 test](#3114-test)
   * [3.1.14.1 Options](#31141-options)
-- [3.1.15 set](#3115-set)
-- [3.1.16 test](#3116-test)
-  * [3.1.16.1 Options](#31161-options)
-- [3.1.17 true](#3117-true)
-- [3.1.18 type](#3118-type)
-- [3.1.19 unalias](#3119-unalias)
-  * [3.1.119.1 Options](#311191-options)
-- [3.1.20 unset](#3120-unset)
+- [3.1.15 true](#3115-true)
+- [3.1.16 type](#3116-type)
+- [3.1.17 unalias](#3117-unalias)
+  * [3.1.17.1 Options](#31171-options)
+- [3.1.18 unset](#3118-unset)
 
 #### 3.1.1 alias
 
@@ -65,83 +65,83 @@ Outputs it's args to stdout, separated by spaces, followed by a newline. The ret
 
 Set the environment for command invocation.
 
-##### 3.1.6.1 Options
+##### 3.1.5.1 Options
 
 `-i`: Invoke utility with exactly the environment specified by the arguments; the inherited environment shall be ignored completely.
 
-#### 3.1.7 exit [n]
+#### 3.1.6 exit [n]
 
 ------
 
 Shall cause the shell to exit with the exit status specified by the unsigned decimal integer n.
 
-#### 3.1.8 export
+#### 3.1.7 export
 
 ------
 
 Marks an environment variable to be exported with any newly forked child processes and thus it allows a child process to inherit all marked variables.
 
-##### 3.1.8.1 Options
+##### 3.1.7.1 Options
 
 `-p`: List of all names that are exported in the current shell.
 
-#### 3.1.9 false
+#### 3.1.8 false
 
 ------
 
 Do nothing, returning a non-zero (false) exit status.
 
-#### 3.1.10 fg
+#### 3.1.9 fg
 
 ------
 
 Put each specified job in the background, or the current job if none is specified.
 
-#### 3.1.11 hash
+#### 3.1.10 hash
 
 ------
 
 Determine and remember the full pathname of each commandname. If no arguments are given, display information about remembered command locations.
 
-##### 3.1.11.1 Options
+##### 3.1.10.1 Options
 
 `-r`: Forget all remembered locations.
 
-#### 3.1.12 history
+#### 3.1.11 history
 
 ------
 
 With no options, display the history list with line numbers.
 
-##### 3.1.13.1 Options
+##### 3.1.11.1 Options
 
 `-c`: Clear the history list.
 
 `-d [offset]`: Delete the history entry at position `offset`. `offset` should be specified as it appears when the history is displayed.
 
-#### 3.1.14 jobs
+#### 3.1.12 jobs
 
 ------
 
 The first form lists the active jobs.
 
-##### 3.1.14.1 Options
+##### 3.1.12.1 Options
 
 `-p`: List only the process ID of the job’s process group leader.
 
-#### 3.1.15 set
+#### 3.1.13 set
 
 ------
 
 Change the value of a shell option and set the positional parameters, or display the names and values of shell variables.
 
-#### 3.1.16 test
+#### 3.1.14 test
 
 ------
 
  Evaluate a conditional expression.
 
-##### 3.1.16.1 Options
+##### 3.1.14.1 Options
 
 `-b [pathname]`: True if `pathname` resolves to an existing directory entry for a block special file. False if `pathname` cannot be resolved, or if `pathname` resolves to an existing directory entry for a file that is not a block special file.
 
@@ -191,29 +191,29 @@ Change the value of a shell option and set the positional parameters, or display
 
 `! [expression]`: True if `expression` is false. False if `expression` is true.
 
-#### 3.1.17 true
+#### 3.1.15 true
 
 ------
 
 Does nothing except return an exit status of 0, meaning "success". 
 
-#### 3.1.18 type
+#### 3.1.16 type
 
 ------
 
 Describe a command. For each *name*, indicate how it would be interpreted if used as a command name.
 
-#### 3.1.19 unalias
+#### 3.1.17 unalias
 
 ------
 
 Remove each name from the list of aliases.
 
-##### 3.1.119.1 Options
+##### 3.1.17.1 Options
 
 `-a`: all aliases are removed.
 
-#### 3.1.20 unset
+#### 3.1.18 unset
 
 ------
 
