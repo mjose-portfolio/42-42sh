@@ -45,6 +45,8 @@ Resume each suspended job in the background, as if it had been started with &.
 
 Return to index: [Builtins](#Builtins), [42sh](../#42sh)
 
+Return to section: [3.8 Job Control Management](../#38-job-control-management)
+
 #### 3.1.3 cd
 
 ------
@@ -115,6 +117,8 @@ Put each specified job in the background, or the current job if none is specifie
 
 Return to index: [Builtins](#Builtins), [42sh](../#42sh)
 
+Return to section: [3.8 Job Control Management](../#38-job-control-management)
+
 #### 3.1.10 hash
 
 ------
@@ -152,6 +156,8 @@ The first form lists the active jobs.
 `-p`: List only the process ID of the job’s process group leader.
 
 Return to index: [Builtins](#Builtins), [42sh](../#42sh)
+
+Return to section: [3.8 Job Control Management](../#38-job-control-management)
 
 #### 3.1.13 set
 
@@ -274,3 +280,5 @@ Process the command history list.
 `-s`: Re-execute the command without invoking an editor.
 
 Return to index: [Builtins](#Builtins), [42sh](../#42sh)
+
+Return to section: [3.11 History Management](../#311-history-management)
