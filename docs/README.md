@@ -1,8 +1,10 @@
 # 42sh
 
-This project consists of creating a complete shell and uses the work done on your 21sh. A minimum set of functionalities is asked, from which your will build your own finalized shell, potentially going as far as job control and shell script. This project will involve a large variety of standard UNIX (and POSIX) functionalities.
+This project consists of creating a complete shell and uses the work done on 21sh and minishell projects. We build our own shell, including a job control and shell script. This project involves a large variety of standard UNIX (and POSIX) functionalities.
 
 ## 1. Project Partners
+
+------
 
 - [Abraham Gimbao](https://github.com/abguimba)
 - [Alexandre Somville](https://github.com/alsomvil42)
@@ -45,6 +47,7 @@ This project consists of creating a complete shell and uses the work done on you
 - [3.1.16 type](./builtins#3116-type)
 - [3.1.17 unalias](./builtins#3117-unalias)
 - [3.1.18 unset](./builtins#3118-unset)
+- [3.1.19 fc](./builtins#3119-fc)
 
 ### 3.2 Prompt
 
@@ -121,3 +124,154 @@ $: PID of the current process.
 !: PID of the last process launched in backround.
 _: Last parameter used in a command.
 ```
+
+### 3.8 Job Control Management
+
+The builtins that allow to interact with the Job Control are:
+
+- [bg](./builtins#312-bg)
+- [fg](./builtins#319-fg)
+- [jobs](./builtins#3112-jobs)
+
+### 3.9 Inhibitors
+
+- Single-quotes: `'`
+
+  Enclosing characters in single-quotes ( `''` ) shall preserve the literal value of each character within the single-quotes. A single-quote cannot occur within single-quotes.
+
+- Double-quotes:`"`
+
+  Enclosing characters in double-quotes ( `""` ) shall preserve the literal value of all characters within the double-quotes, with the exception of the characters backquote, <dollar-sign>, and <backslash>.
+
+- Escape Character (Backslash): `\`
+
+   A <backslash> that is not quoted shall preserve the literal value of the following character, with the exception of a <newline>. If a <newline> follows the <backslash>, the shell shall interpret this as line continuation. The <backslash> and <newline> shall be removed before splitting the input into tokens. Since the escaped <newline> is removed entirely from the input and is not replaced by any white space, it cannot serve as a token separator.
+
+### 3.10 Parameter Expansions
+
+```
+${parameter:-[word]}
+```
+
+**Use Default Values**. If *parameter* is unset or null, the expansion of *word* (or an empty string if *word* is omitted) shall be substituted; otherwise, the value of *parameter* shall be substituted.
+
+```
+${parameter:=[word]}
+```
+
+**Assign Default Values**. If *parameter* is unset or null, the expansion of *word* (or an empty string if *word* is omitted) shall be assigned to *parameter*. In all cases, the final value of *parameter* shall be substituted. Only variables, not positional parameters or special parameters, can be assigned in this way.
+
+```
+${parameter:?[word]}
+```
+
+**Indicate Error if Null or Unset**. If *parameter* is unset or null, the expansion of *word* (or a message indicating it is unset if *word* is omitted) shall be written to standard error and the shell exits with a non-zero exit status. Otherwise, the value of *parameter* shall be substituted. An interactive shell need not exit.
+
+```
+${parameter:+[word]}
+```
+
+**Use Alternative Value**. If *parameter* is unset or null, null shall be substituted; otherwise, the expansion of *word* (or an empty string if *word* is omitted) shall be substituted.
+
+```
+${#parameter}
+```
+
+**String Length**. The length in characters of the value of *parameter* shall be substituted. If *parameter* is `'*'` or `'@'`, the result of the expansion is unspecified. If *parameter* is unset and [*set*](https://pubs.opengroup.org/onlinepubs/9699919799//utilities/V3_chap02.html#set) **-u** is in effect, the expansion shall fail.
+
+```
+${parameter%[word]}
+```
+
+**Remove Smallest Suffix Pattern**. The *word* shall be expanded to produce a pattern. The parameter expansion shall then result in *parameter*, with the smallest portion of the suffix matched by the *pattern* deleted. If present, *word* shall not begin with an unquoted `'%'`.
+
+```
+${parameter%%[word]}
+```
+
+**Remove Largest Suffix Pattern**. The *word* shall be expanded to produce a pattern. The parameter expansion shall then result in *parameter*, with the largest portion of the suffix matched by the *pattern* deleted.
+
+```
+${parameter#[word]}
+```
+
+**Remove Smallest Prefix Pattern**. The *word* shall be expanded to produce a pattern. The parameter expansion shall then result in *parameter*, with the smallest portion of the prefix matched by the *pattern* deleted. If present, *word* shall not begin with an unquoted `'#'`.
+
+```
+${parameter##[word]}
+```
+
+**Remove Largest Prefix Pattern**. The *word* shall be expanded to produce a pattern. The parameter expansion shall then result in *parameter*, with the largest portion of the prefix matched by the *pattern* deleted.
+
+```
+~
+```
+
+**HOME path of the current user.** Is replaced by the HOME path of the current user
+
+```
+~[user name]
+```
+
+**HOME path of the user name.**  The tilde-prefix is replaced with the home directory associated with the specified user name.
+
+```
+~+
+```
+
+**PWD value**. the value of the [shell variable] `PWD` replaces the tilde-prefix.
+
+```
+~-
+```
+
+**OLDPWD value**. the value of the [shell variable] `OLDPWD` replaces the tilde-prefix.
+
+### 3.11 History Management
+
+Executed commands are automatically saved in the `$HOME/.42hist` file, so that they can be used from other sessions.
+
+Incremental search in the history with the key combination `CTRL-R`.
+
+The builtin that allow to interact with the Job Control is:
+
+- [fc](./builtins#3119-fc)
+
+It is also possible to navigate through the history with the `up and down arrow keys`.
+
+#### 3.11.1 History Expansions
+
+```
+!
+```
+
+Start a history substitution, except when followed by a space, tab, the end of the line, `=` or `(`.
+
+```
+!!
+```
+
+Refer to the previous command. This is a synonym for `!-1`.
+
+```
+![word]
+```
+
+Refer to the most recent command preceding the current position in the history list starting with `word`.
+
+```
+![number]
+```
+
+Refer to command line `number`.
+
+```
+!-[numer]
+```
+
+Refer to the command `n` lines back.
+
+### 3.12 Contextual Dynamic Completion
+
+It is possible to autocomplete variables, file commands, by pressing the 'TAB key', whether or not the command has been typed.
+
