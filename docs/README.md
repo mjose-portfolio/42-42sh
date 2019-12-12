@@ -88,3 +88,36 @@ it is possible to separate commands using the operand `;`.
 command1 ; command2 ...
 ```
 
+### 3.7 Management Of Internal Variables
+
+- Creation of internal variables according to the syntax:
+
+```
+name=value
+```
+
+- Export of internal variables to the environment, via built-in [export](./builtins#317-export).
+- List the internal variables of the shell via the built-in [set]((./builtins#3113-set)).
+- Removal of internal and environmental variables, via the built-in [unset](./builtins#3118-unset).
+- Creation of environment variables for a single command, example :
+
+```
+HOME=/tmp cd
+```
+
+- Simple expansion of parameters according to the syntax:
+
+```
+${name}
+$name
+```
+
+- Management of special parameters:
+
+```
+$: PID of the current process.
+?: Last command exit code.
+0: Shell name.
+!: PID of the last process launched in backround.
+_: Last parameter used in a command.
+```
