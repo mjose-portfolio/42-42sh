@@ -26,6 +26,8 @@
 - [3.1.17 unalias](#3117-unalias)
   * [3.1.17.1 Options](#31171-options)
 - [3.1.18 unset](#3118-unset)
+- [3.1.19 fc](#3119-fc)
+  * [3.1.19.1 Options](#31191-fc)
 
 #### 3.1.1 alias
 
@@ -250,5 +252,25 @@ Return to index: [Builtins](#Builtins), [42sh](../#42sh)
 ------
 
 Remove variable.
+
+Return to index: [Builtins](#Builtins), [42sh](../#42sh)
+
+#### 3.1.19 fc
+
+------
+
+Process the command history list.
+
+##### 3.1.19.1 Options
+
+`-e [editor]`: Use the editor named by `editor` to edit the commands. The `editor` string is a utility name, subject to search via the `PATH` variable. The value in the `FCEDIT` variable shall be used as a default when **-e** is not specified. If `FCEDIT` is null or unset, `ed` shall be used as the editor.
+
+`-l`: List the commands rather than invoking an editor on them. The commands shall be written in the sequence indicated by the *first* and *last* operands, as affected by **-r**, with each command preceded by the command number.
+
+`-n`: Suppress command numbers when listing with `-l`.
+
+`-r`: Reverse the order of the commands listed (with `-l`) or edited (with neither `-l` nor `-s`).
+
+`-s`: Re-execute the command without invoking an editor.
 
 Return to index: [Builtins](#Builtins), [42sh](../#42sh)
