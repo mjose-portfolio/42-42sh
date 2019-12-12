@@ -50,7 +50,7 @@ This project consists of creating a complete shell and uses the work done on you
 
 The prompt is displayed as follows:
 
-- `["user"]<"current directory"42sh $/>`
+- `["user"]<"current directory">42sh $/>`
 
 The current directory is updated live, each time you change directory, of course, the information is collected from the environment variable `PWD`.
 
@@ -69,4 +69,22 @@ The parameters of each command are taken into account.
 - [3.4.3 Here-Document](./redirections#343-here-document)
 - [3.4.4 Duplicating an Input File Descriptor](./redirections#344-duplicating-an-input-file-descriptor)
 - [3.4.5 Duplicating an Output File Descriptor](./redirections#345-duplicating-an-output-file-descriptor)
+
+### 3.5 Pipelines
+
+The format for a pipeline is:
+
+```
+command1 [ | command2 ...]
+```
+
+The standard output of `command1` shall be connected to the standard input of `command2`. The standard input, standard output, or both of a command shall be considered to be assigned by the pipeline before any redirection specified by redirection operators that are part of the command.
+
+### 3.6 `;` Operand
+
+it is possible to separate commands using the operand `;`.
+
+```
+command1 ; command2 ...
+```
 
