@@ -245,7 +245,7 @@ It is also possible to navigate through the history with the `up and down arrow 
 !
 ```
 
-Start a history substitution, except when followed by a space, tab, the end of the line, ‘=’ or ‘(’.
+Start a history substitution, except when followed by a space, tab, the end of the line, `=` or `(`.
 
 ```
 !!
