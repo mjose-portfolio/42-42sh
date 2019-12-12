@@ -46,3 +46,27 @@ This project consists of creating a complete shell and uses the work done on you
 - [3.1.17 unalias](./builtins#3117-unalias)
 - [3.1.18 unset](./builtins#3118-unset)
 
+### 3.2 Prompt
+
+The prompt is displayed as follows:
+
+- `["user"]<"current directory"42sh $/>`
+
+The current directory is updated live, each time you change directory, of course, the information is collected from the environment variable `PWD`.
+
+### 3.3 Execution of Commands
+
+The command shall be searched for using the PATH environment variable.
+
+It is possible to specify the paths where the command to execute resides (in case you want to execute a command that does not reside in any directory of the PATH variable, or the variable is not defined).
+
+The parameters of each command are taken into account.
+
+### 3.4 Redirections
+
+- [3.4.1 Redirecting Input](./redirections#341-redirecting-input)
+- [3.4.2 Redirecting Output](./redirections#342-redirecting-output)
+- [3.4.3 Here-Document](./redirections#343-here-document)
+- [3.4.4 Duplicating an Input File Descriptor](./redirections#344-duplicating-an-input-file-descriptor)
+- [3.4.5 Duplicating an Output File Descriptor](./redirections#345-duplicating-an-output-file-descriptor)
+
