@@ -1,6 +1,6 @@
 # 42sh
 
-This project consists of creating a complete shell and uses the work done on 21sh and minishell projects. We build our own shell, including a job control and shell script. This project involves a large variety of standard UNIX (and POSIX) functionalities.
+This project consists of creating a complete shell and uses the work done on [21sh](https://github.com/mjose-portfolio/42-21sh#21sh) and minishell projects. We build our own shell, including a job control and shell script. This project involves a large variety of standard UNIX (and POSIX) functionalities.
 
 ## 1. Project Partners
 
@@ -274,4 +274,16 @@ Refer to the command `n` lines back.
 ### 3.12 Contextual Dynamic Completion
 
 It is possible to autocomplete variables, file commands, by pressing the 'TAB key', whether or not the command has been typed.
+
+### 3.13 Command line
+
+The command line features are:
+
+- Edit the line where the cursor is located.
+- Move the cursor left and right to be able to edit the line at a specific location.
+- Use up and down arrows to navigate through the command history able to edit if we feel like it.
+- Cut, copy, and/or paste all or part of a line whit cmd+f1 cmd+f2 cmd+f3
+- Move directly by word towards the left or the right using shift+LEFT and shift+RIGHT.
+- Go directly to the beginning or the end of a line by pressing fn+left and fn+right.
+- Write AND edit a command over a few lines.
 
