@@ -1,6 +1,6 @@
 # 42sh
 
-This project consists of creating a complete shell and uses the work done on [21sh](https://github.com/mjose-portfolio/42-21sh#21sh) and minishell projects. We build our own shell, including a job control and shell script. This project involves a large variety of standard UNIX (and POSIX) functionalities.
+This project consists of creating a complete shell and uses the work done on [21sh](https://github.com/mjose-portfolio/42-21sh#21sh) and [minishell](https://github.com/mjose-portfolio/42-minishell#minishell) projects. We build our own shell, including a job control and shell script. This project involves a large variety of standard UNIX (and POSIX) functionalities.
 
 ## 1. Project Partners
 
